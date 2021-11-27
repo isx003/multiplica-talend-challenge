@@ -1,8 +1,8 @@
 module.exports = {
   development: {
-    username: 'root',
-    password: '123',
-    database: 'tsc',
+    username: '',
+    password: '',
+    database: '',
     host: 'tsc-pg',
     port: 5432,
     dialect: 'postgres',

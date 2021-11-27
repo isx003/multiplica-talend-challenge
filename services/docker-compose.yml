@@ -2,25 +2,14 @@ version: "3.8"
 
 services: 
   multiplica-api:
-    container_name: multiplica-api-dev
+    container_name: multiplica-api
     build: 
       context: .
-      dockerfile: Dockerfile.multiplica-api-dev
+      dockerfile: Dockerfile.multiplica-api
     volumes: 
-      - ${SERVER_PATH}:/app
+      - ${API_PATH}:/app
     ports: 
-      - "${SERVER_PORT}:8080"
-    logging:
-      options:
-        max-size: 3m
-
-  multiplica-api-prod:
-    container_name: multiplica-api-prod
-    build: 
-      context: .
-      dockerfile: Dockerfile.multiplica-api-prod
-    ports: 
-      - "${SERVER_PORT_PROD}:8080"
+      - "${API_PORT}:8080"
     logging:
       options:
         max-size: 3m
