@@ -21,14 +21,14 @@ Go to /service and copy and paste .env.sample, rename new file with .env and set
 | DB_NAME | Database name will be create |
 | ADMINER_PORT | Port to expose mini database manage inside container to local. Example 8001 |
 
-Go to /service/api and copy and paste .env.sample, rename new file with .env and set follow variables and must be the same value that in /service/.env
+Go to /services/api and copy and paste .env.sample, rename new file with .env and set follow variables and must be the same value that in /services/.env
 | VARIABLE | DESCRIPTION |
 | ------ | ------ |
 | DB_USERNAME | Username to connect to database. Example root or postgre |
 | DB_PASSWORD | Password to connect to database |
 | DB_NAME | Database name |
 
-Go to /service/api/database and copy and paste config.sample, rename new file with config.js and set follow variables and must be the same value for connect with database setted in /service/.env
+Go to /services/api/database and copy and paste config.sample, rename new file with config.js and set follow variables and must be the same value for connect with database setted in /services/.env
 | VARIABLE | DESCRIPTION |
 | ------ | ------ |
 | username | Username to connect to database. Example root or postgre |
@@ -36,7 +36,7 @@ Go to /service/api/database and copy and paste config.sample, rename new file wi
 | database | Database name |
 
 ### For production
-Edit the file  /service/docker-compose.yml. Change all service multiplica-api instead the following:
+Edit the file  /services/docker-compose.yml. Change all service multiplica-api instead the following:
 ```
 multiplica-api:
   container_name: multiplica-api
