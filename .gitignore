@@ -1,0 +1,7 @@
+db/*
+services/.env
+services/api/database/config.js
+services/api/node_modules
+services/api/dist
+services/api/package-lock.json
+services/api/.env

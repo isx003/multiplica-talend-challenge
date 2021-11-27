@@ -1,0 +1,11 @@
+module.exports = {
+  development: {
+    username: 'root',
+    password: '123',
+    database: 'tsc',
+    host: 'tsc-pg',
+    port: 5432,
+    dialect: 'postgres',
+    migrationStorageTableName: 'migrations'
+  },
+};
