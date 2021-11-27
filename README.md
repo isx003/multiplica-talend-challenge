@@ -211,7 +211,7 @@ type: type xml response
 }
 ```
 
-## _PRODUCTION URLS_
+## _PRODUCTION URL
 ```
-gaaa
+http://51.222.9.47:8000/
 ```
