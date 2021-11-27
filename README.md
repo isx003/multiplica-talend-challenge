@@ -74,8 +74,8 @@ docker-compose exec multiplica-api npm run db:seed
 `GET /colores?page=1&qty=5`
 
 #### Params
-page: current page
-qty: qty colors to get
+- page: current page
+- qty: qty colors to get
 
 #### Response
 ```
@@ -117,9 +117,9 @@ qty: qty colors to get
 `GET /colores?page=1&qty=5?type=xml`
 
 #### Params
-page: current page
-qty: qty colors to get
-type: response type
+- page: current page
+- qty: qty colors to get
+- type: response type
 
 #### Response
 
@@ -163,7 +163,7 @@ type: response type
 `GET /colores/:id`
 
 #### Params
-id: color id
+- id: color id
 
 #### Response
 
@@ -181,8 +181,8 @@ id: color id
 `GET /colores/:id?type=xml`
 
 #### Params
-id: color id
-type: type xml response
+- id: color id
+- type: type xml response
 
 #### Response
 ```
@@ -196,13 +196,13 @@ type: type xml response
 </color>
 ```
 
-`POST '/colores`
+`POST /colores`
 
 #### Params
---data-urlencode name=democolor
---data-urlencode year=2021
---data-urlencode color=#FFFAAA
---data-urlencode pantone_value=12-1231
+- --data-urlencode name=democolor
+- --data-urlencode year=2021
+- --data-urlencode color=#FFFAAA
+- --data-urlencode pantone_value=12-1231
 
 #### Response
 ```
@@ -211,7 +211,7 @@ type: type xml response
 }
 ```
 
-## _PRODUCTION URL
+## _PRODUCTION URL_
 ```
 http://51.222.9.47:8000/
 ```
