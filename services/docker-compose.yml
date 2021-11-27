@@ -6,6 +6,7 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile.multiplica-api
+    image: multiplica-api:0.1
     volumes: 
       - ${API_PATH}:/app
     ports: 
@@ -13,6 +14,22 @@ services:
     logging:
       options:
         max-size: 3m
+    depends_on:
+      - multiplica-pg
+
+  # multiplica-api:
+  #   container_name: multiplica-api
+  #   build: 
+  #     context: .
+  #     dockerfile: Dockerfile.multiplica-api-prod
+  #   image: multiplica-api:1.0
+  #   ports: 
+  #     - "${API_PORT}:8080"
+  #   logging:
+  #     options:
+  #       max-size: 3m
+  #   depends_on:
+  #     - multiplica-pg
 
   multiplica-pg:
     container_name: multiplica-pg
@@ -23,9 +40,9 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: ${DB_NAME}
     ports:
-      - ${PG_PORT}:5432
+      - ${DB_PORT}:5432
     volumes:
-      - "${PG_PATH}:/var/lib/postgresql/data"
+      - "${DB_PATH}:/var/lib/postgresql/data"
 
   multiplica-adminer:
     build:
