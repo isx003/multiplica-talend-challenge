@@ -1,6 +1,6 @@
 FROM node:14-alpine
 RUN mkdir -p /app
 WORKDIR /app
-COPY ./server/* ./
+COPY ./api/* ./
 RUN npm i
 CMD npm run dev
